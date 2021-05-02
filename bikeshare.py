@@ -90,7 +90,7 @@ def get_month_name(monthinteger):
 def get_filters():
     
     #List of default data (City, month and WeekName)
-    lst_city=['chicago', 'new york city', 'washington','all']
+    lst_city=['chicago', 'new york city', 'washington',]
     lst_month=['january', 'february', 'march', 'april', 'may', 'june','all']
     lst_week_name=['sunday','monday','tuesday','wednesday','thursday','friday','saturday','all'] 
     
@@ -285,7 +285,12 @@ def display_data(df):
 def main():
     name=input('Please enter your name!')
     print('Hello {}'.format(name))
+    nb=1
     while True:
+        if nb==1:
+            print('You executed the program for the first Time')
+        else:
+            print('You exectuted the program {} times now!'.format(nb))
         city, month, day = get_filters()
         df=load_data(city,month,day)
         user_stats(df,city)
@@ -302,6 +307,7 @@ def main():
             print('-'*40)
             print('-'*40)
             print('-'*40)
+        nb=nb+1
 
 if __name__ == "__main__":
     main()
