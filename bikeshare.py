@@ -283,6 +283,8 @@ def display_data(df):
         else:
             break
 def main():
+    name=input('Please enter your name!')
+    print('Hello {}'.format(name))
     while True:
         city, month, day = get_filters()
         df=load_data(city,month,day)
