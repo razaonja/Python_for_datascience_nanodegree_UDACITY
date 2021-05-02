@@ -277,7 +277,7 @@ def display_data(df):
         df=df[['Start Time', 'End Time', 'Trip Duration','Start Station', 'End Station', 'User Type']]
         print(df.loc[from_i:to_i])
         f_more_rows=input('Press \'ENTER\' for more rows!')
-        if f_more_rows=='':
+        if f_more_rows=='':#if user an empty input then display 5 more rows
             from_i+=5
             to_i+=5
         else:
